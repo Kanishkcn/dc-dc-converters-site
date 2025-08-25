@@ -5,20 +5,19 @@
   <title>Register | Maxwellium</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="logo">Maxwellium</div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-      </div>
-    </nav>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Maxwellium</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Register</a>
+    </div>
+  </nav>
 
-  <main>
+  <!-- Register Form -->
+  <div class="form-container">
     <h2>Register</h2>
     <form id="registerForm">
       <input type="email" id="registerEmail" placeholder="Email" required>
@@ -26,7 +25,7 @@
       <button type="submit">Register</button>
     </form>
     <p>Already have an account? <a href="login.html">Login</a></p>
-  </main>
+  </div>
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
