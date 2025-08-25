@@ -1,29 +1,19 @@
+<h2>Welcome to Maxwellium Dashboard</h2>
+<p id="welcomeText"></p>
+<button onclick="logout()">Logout</button>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dashboard - Maxwellium</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div class="container">
-    <h2 id="welcomeMessage">Welcome!</h2>
-    <button onclick="logout()">Logout</button>
-  </div>
+<script>
+auth.onAuthStateChanged(user => {
+  if (user) {
+    document.getElementById("welcomeText").innerText = "Welcome, " + user.email;
+  } else {
+    window.location.href = "login.html";
+  }
+});
 
-  <script>
-    let user = sessionStorage.getItem("loggedInUser");
-    if(!user) {
-      window.location.href = "login.html";
-    } else {
-      document.getElementById("welcomeMessage").innerText = "Welcome, " + user + "!";
-    }
-
-    function logout() {
-      sessionStorage.removeItem("loggedInUser");
-      window.location.href = "login.html";
-    }
-  </script>
-</body>
-</html>
+function logout() {
+  auth.signOut().then(() => {
+    window.location.href = "login.html";
+  });
+}
+</script>
