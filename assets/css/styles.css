@@ -1,13 +1,15 @@
-/* Global Styles */
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0d1b2a;
-  color: #e0e1dd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d1b2a;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
 
 /* Navbar */
@@ -17,17 +19,17 @@ nav {
   align-items: center;
   padding: 15px;
   background: #0d1b2a;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-nav div:first-child {
+nav .logo {
   color: #00d4ff;
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 1px;
 }
 
-nav a {
+nav .nav-links a {
   margin: 0 8px;
   padding: 8px 16px;
   background: #1b263b;
@@ -38,66 +40,58 @@ nav a {
   transition: 0.3s;
 }
 
-nav a:hover {
+nav .nav-links a:hover {
   background: #00d4ff;
   color: #0d1b2a;
 }
 
-/* Form Container */
-form {
-  display: flex;
-  flex-direction: column;
+/* Form */
+main {
+  max-width: 400px;
+  margin: 50px auto;
   background: #1b263b;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
-  width: 300px;
-  margin-top: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00d4ff;
 }
 
 form input {
-  margin-bottom: 15px;
+  width: 100%;
   padding: 12px;
-  border: 1px solid #00d4ff;
-  border-radius: 8px;
-  background: #0d1b2a;
-  color: #e0e1dd;
-  font-size: 14px;
-}
-
-form input:focus {
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
   outline: none;
-  border-color: #00aaff;
-  box-shadow: 0 0 5px #00aaff;
 }
 
-/* Buttons */
 form button {
+  width: 100%;
   padding: 12px;
   background: #00d4ff;
-  border: none;
-  border-radius: 8px;
   color: #0d1b2a;
-  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 form button:hover {
-  background: #00aaff;
+  background: #009ec3;
 }
 
-/* Text links */
 p {
+  text-align: center;
   margin-top: 15px;
-  color: #e0e1dd;
 }
 
 p a {
   color: #00d4ff;
   text-decoration: none;
-}
-
-p a:hover {
-  text-decoration: underline;
 }
