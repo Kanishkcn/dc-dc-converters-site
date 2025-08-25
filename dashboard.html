@@ -6,14 +6,25 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <h2>Dashboard</h2>
-  <p id="welcomeMessage">Welcome!</p>
-  <button id="logoutBtn">Logout</button>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Maxwellium</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard">
+    <h2>Welcome to your Dashboard!</h2>
+    <p>You are successfully logged in.</p>
+  </div>
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <!-- Custom script -->
   <script src="script.js"></script>
 </body>
 </html>
