@@ -45,7 +45,43 @@ nav .nav-links a:hover {
   color: #0d1b2a;
 }
 
-/* Form */
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 600px;
+  padding: 30px;
+  background: #1b263b;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #00d4ff;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00d4ff;
+  color: #0d1b2a;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #009ec3;
+}
+
+/* Forms */
 main {
   max-width: 400px;
   margin: 50px auto;
