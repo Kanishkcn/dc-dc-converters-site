@@ -6,25 +6,33 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">Maxwellium</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="#" id="logoutBtn">Logout</a>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="brand">
+        <span class="brand-text">Maxwellium</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <!-- Dashboard Content -->
-  <div class="dashboard">
+  <div class="container dashboard">
     <h2>Welcome to your Dashboard!</h2>
     <p>You are successfully logged in.</p>
   </div>
 
-  <!-- Firebase -->
+  <!-- Firebase scripts -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
