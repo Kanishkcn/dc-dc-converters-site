@@ -1,19 +1,19 @@
-<h2>Welcome to Maxwellium Dashboard</h2>
-<p id="welcomeText"></p>
-<button onclick="logout()">Logout</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Maxwellium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Dashboard</h2>
+  <p id="welcomeMessage">Welcome!</p>
+  <button id="logoutBtn">Logout</button>
 
-<script>
-auth.onAuthStateChanged(user => {
-  if (user) {
-    document.getElementById("welcomeText").innerText = "Welcome, " + user.email;
-  } else {
-    window.location.href = "login.html";
-  }
-});
-
-function logout() {
-  auth.signOut().then(() => {
-    window.location.href = "login.html";
-  });
-}
-</script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <!-- Custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
