@@ -1,36 +1,17 @@
+<h2>Register</h2>
+<input type="email" id="regEmail" placeholder="Email">
+<input type="password" id="regPassword" placeholder="Password">
+<button onclick="register()">Register</button>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Register - Maxwellium</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div class="container">
-    <h2>Register</h2>
-    <form id="registerForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Register</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login</a></p>
-  </div>
-
-  <script>
-    document.getElementById("registerForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      let username = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
-
-      if(localStorage.getItem(username)) {
-        alert("User already exists!");
-      } else {
-        localStorage.setItem(username, password);
-        alert("Registration successful! Please login.");
-        window.location.href = "login.html";
-      }
-    });
-  </script>
-</body>
-</html>
+<script>
+function register() {
+  const email = document.getElementById("regEmail").value;
+  const password = document.getElementById("regPassword").value;
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      alert("Registered successfully!");
+      window.location.href = "dashboard.html";
+    })
+    .catch(error => alert(error.message));
+}
+</script>
