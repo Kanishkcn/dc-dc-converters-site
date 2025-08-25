@@ -42,9 +42,6 @@
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
       </nav>
       <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
@@ -123,5 +120,26 @@
       </div>
     </div>
   </footer>
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+
+<script>
+  // Your Firebase config
+  const firebaseConfig = {
+  apiKey: "AIzaSyCrBfNKqJyvxOXMMeR8-5Lawauze3YZqys",
+  authDomain: "powerelectronics-maxwellium.firebaseapp.com",
+  projectId: "powerelectronics-maxwellium",
+  storageBucket: "powerelectronics-maxwellium.firebasestorage.app",
+  messagingSenderId: "69351680581",
+  appId: "1:69351680581:web:c4b979ba8917125c6e512c",
+  measurementId: "G-2XE11H7676"
+};
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script>
+
 </body>
 </html>
