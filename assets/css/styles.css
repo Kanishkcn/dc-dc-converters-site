@@ -1,84 +1,86 @@
-/* Maxwellium Styles */
-:root{
-  --bg:#0b1324;
-  --panel:#0f1f3b;
-  --panel-2:#13284f;
-  --text:#e6efff;
-  --muted:#a7b4d6;
-  --accent:#5681ff;
-  --accent-2:#7ab8ff;
-  --border:#203454;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
+/* ------------------- Login / Register / Dashboard Styles ------------------- */
+
+/* Centered form container */
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--panel);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
 }
 
-:root.light {
-  --bg:#f7f9ff;
-  --panel:#ffffff;
-  --panel-2:#eef3ff;
-  --text:#111827;
-  --muted:#4b5563;
-  --accent:#1d4ed8;
-  --accent-2:#3b82f6;
-  --border:#d1d5db;
-  --shadow:0 10px 30px rgba(2,6,23,.08);
+/* Form headings */
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-.no-js .theme-toggle{display:none}
-.container{width:min(1200px,92%);margin-inline:auto}
-.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;z-index:1000;background:var(--panel);color:var(--text);padding:.5rem 1rem;border-radius:.5rem;box-shadow:var(--shadow)}
-
-.site-header{position:sticky;top:0;z-index:50;background:rgba(11,19,36,.85);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--border)}
-:root.light .site-header{background:rgba(255,255,255,.85)}
-.header-inner{display:flex;align-items:center;gap:1rem;padding:.75rem 0}
-.brand{display:inline-flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text)}
-.brandmark{height:28px}
-.brand-text{font:600 18px/1 Inter,system-ui,Segoe UI,Roboto,Arial;fill:var(--text)}
-.b-accent{fill:var(--accent);opacity:.2}
-.b-stroke{stroke:var(--accent)}
-
-.nav-toggle{display:none}
-.nav-menu{display:flex;gap:.5rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-.nav-menu a{display:block;padding:.5rem .75rem;border-radius:.5rem;text-decoration:none;color:var(--text);border:1px solid transparent}
-.nav-menu a:hover,.nav-menu a[aria-current="page"]{background:var(--panel-2);border-color:var(--border)}
-
-.theme-toggle{margin-left:auto;border:1px solid var(--border);background:var(--panel);padding:.5rem;border-radius:.75rem;cursor:pointer;box-shadow:var(--shadow)}
-.theme-toggle .icon-sun::before{content:"☀"}
-.theme-toggle .icon-moon::before{content:"🌙";margin-left:.35rem;opacity:.7}
-
-.hero{padding:clamp(2rem,5vw,5rem) 0;background:
-  radial-gradient(1000px 400px at 10% -10%, rgba(86,129,255,.25), transparent),
-  radial-gradient(800px 300px at 90% -20%, rgba(122,184,255,.15), transparent)
+/* Form inputs */
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--panel-2);
+  color: var(--text);
+  font-size: 1rem;
 }
-.hero h1{font-size:clamp(28px,4.2vw,54px);line-height:1.1;margin:0 0 .75rem}
-.hero p{font-size:clamp(16px,2vw,20px);max-width:72ch;color:var(--muted)}
-.actions{display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.75rem;text-decoration:none;border:1px solid var(--border);background:var(--panel);color:var(--text);box-shadow:var(--shadow)}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border-color:transparent;color:white}
 
-.section{padding:clamp(2rem,5vw,4rem) 0;border-top:1px solid var(--border)}
-.grid{display:grid;gap:1rem}
-.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:1rem;padding:1rem;box-shadow:var(--shadow)}
-.card h3{margin-top:0}
+.form-container input::placeholder {
+  color: var(--muted);
+}
 
-.kpi{display:flex;gap:1rem;flex-wrap:wrap;margin:.5rem 0 0}
-.kpi .pill{padding:.35rem .6rem;border:1px solid var(--border);border-radius:999px;background:var(--panel-2);font-size:.85rem;color:var(--muted)}
+/* Buttons */
+.form-container button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-.banner{display:grid;gap:1rem;grid-template-columns:1.4fr 1fr;align-items:center}
-.banner .illustration{background:var(--panel);border:1px solid var(--border);border-radius:1rem;min-height:220px;box-shadow:var(--shadow)}
-@media (max-width: 860px){.banner{grid-template-columns:1fr} .nav-toggle{display:inline-flex} .nav-menu{display:none;flex-direction:column} .nav[aria-expanded="true"] .nav-menu{display:flex}}
+.form-container button:hover {
+  background: var(--accent-2);
+}
 
-.table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:.75rem;overflow:hidden}
-.table th,.table td{padding:.75rem;border-bottom:1px solid var(--border);text-align:left}
-.table th{background:var(--panel-2);color:var(--muted)}
-.table tr:last-child td{border-bottom:none}
+/* Links inside forms */
+.form-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
-.site-footer{border-top:1px solid var(--border);padding:2rem 0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.02))}
-.footer-grid{display:grid;gap:1rem;grid-template-columns:2fr 1fr 1fr;align-items:start}
-.footer-links{list-style:none;margin:0;padding:0;display:grid;gap:.25rem}
-.small{color:var(--muted);font-size:.85rem}
+.form-container p a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Dashboard page */
+.dashboard {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--panel);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.dashboard h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.dashboard p {
+  color: var(--text);
+  font-size: 1.1rem;
+}
